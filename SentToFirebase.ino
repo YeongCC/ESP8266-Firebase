@@ -8,7 +8,7 @@
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
-#define FIREBASE_HOST "test-ff03f.firebaseio.com"
+#define FIREBASE_HOST "******.firebaseio.com"
 #define FIREBASE_AUTH "**************************"
 #define WIFI_SSID "*******"
 #define WIFI_PASSWORD "*********"

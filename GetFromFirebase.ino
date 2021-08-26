@@ -6,16 +6,15 @@
 #include <FirebaseObject.h>
 
 #include <ESP8266WiFi.h>
-#include <DHT.h>
 
 #define FIREBASE_HOST "**************.firebaseio.com"
 #define FIREBASE_AUTH "************"
 #define WIFI_SSID "*********"
 #define WIFI_PASSWORD "***********"
-#define DHTPIN 14
-#define DHTTYPE DHT22
 
-DHT dht(DHTPIN, DHTTYPE);
+float temp;
+float humidity;
+
 
 void setup() {
   Serial.begin(9600);
@@ -34,8 +33,6 @@ void setup() {
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
 }
 
-float temp;
-float humidity;
 
 void loop() {
 

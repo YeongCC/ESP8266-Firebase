@@ -18,7 +18,6 @@ float humidity;
 
 void setup() {
   Serial.begin(9600);
-  dht.begin();
 
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   Serial.print("connecting");

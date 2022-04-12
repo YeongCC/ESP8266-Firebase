@@ -1,10 +1,4 @@
-#include <Firebase.h>
 #include <FirebaseArduino.h>
-#include <FirebaseCloudMessaging.h>
-#include <FirebaseError.h>
-#include <FirebaseHttpClient.h>
-#include <FirebaseObject.h>
-
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
@@ -65,7 +59,10 @@ void loop() {
   }
   delay(1000);
 
-  Serial.print("number: ");
-  Serial.println(Firebase.getFloat("number"));
+  Serial.print("Data Temperature: ");
+  Serial.println(Firebase.getFloat("temperature"));
+  Serial.print("Data Humidity: ");
+  Serial.println(Firebase.getFloat("humidity"));
+  Serial.println();
   delay(1000);
 }
